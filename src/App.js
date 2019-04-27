@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import './App.css';
 import Landing from './components/Landing';
 import Library from './components/Library';
+import album from './components/album';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
                  <nav>
              <Link to='/'>Landing</Link>
              <Link to='/library'>Library</Link>
+             <Link to='/album'>album</Link>
            </nav>
            <h1>Bloc Jams</h1>
          </header>
