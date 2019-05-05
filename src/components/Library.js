@@ -8,7 +8,7 @@ class Library extends Component {
       }
       this.state = { albums: albumData };
     render() {
-     return ( 
+     return (
        <section className='library'>
 
          {
