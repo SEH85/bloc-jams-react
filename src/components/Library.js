@@ -7,10 +7,8 @@ class Library extends Component {
         super(props);
       this.state = { albums: albumData };
     }
-        
     render() {
-    
-     return (
+     return ( 
        <section className='library'>
 
          {
@@ -18,7 +16,6 @@ class Library extends Component {
           <Link to={`/album/${album.slug}`} key={index}>
               {album.title}
               <img src={album.albumCover} alt={album.title} />
-               <div>{album.title}</div>
                <div>{album.artist}</div>
                <div>{album.songs.length} songs</div>
                </Link>
