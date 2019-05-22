@@ -35,21 +35,13 @@ class Album extends Component {
            <tbody>
            {
             this.state.album.songs.map(( song, index ) =>
-<<<<<<< Updated upstream
-              <tr>
-=======
               <tr key={index}>
->>>>>>> Stashed changes
                 <td className="song-number">{index+1}</td>
                 <td className="song-title">{song.title}</td>
                 <td className="song-duration">{song.duration}</td>
               </tr>
             )
           }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
            </tbody>
          </table>
       
