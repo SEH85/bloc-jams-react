@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
+import "./album.css"
 
 class Album extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class Album extends Component {
     this.setState({ currentSong: song });
   }
 
-  handleSongClick(song) {
+   handleSongClick(song) {
     const isSameSong = this.state.currentSong === song;
     if (this.state.isPlaying && isSameSong) {
       this.pause();
