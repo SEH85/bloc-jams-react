@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
-
+import "./album.css"
 class Album extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +33,7 @@ class Album extends Component {
     this.setState({ currentSong: song });
   }
 
-  handleSongClick(song) {
+   handleSongClick(song) {
     const isSameSong = this.state.currentSong === song;
     if (this.state.isPlaying && isSameSong) {
       this.pause();
@@ -41,6 +41,17 @@ class Album extends Component {
       if (!isSameSong) { this.setSong(song); }  
       this.play();
     }
+  }
+  songClass(song){
+    if(this.state.currentSong===song){
+      if(this.state.isPlaying){
+        return "song playing"
+          
+      }else {
+        return "song"
+      }
+    }
+    return "song"
   }
   render() {
     return (
@@ -61,8 +72,14 @@ class Album extends Component {
            </colgroup>  
            <tbody>
            {this.state.album.songs.map(( song, index ) =>
-             <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-                <td className="song-number">{index+1}</td>
+             <tr className={this.songClass(song)} key={index} onClick={() => this.handleSongClick(song)} >
+                <td className="song-actions"> 
+                <button>
+                  <span className="song-number">{index+1}</span>
+                  <span className="icon ion-md-play"></span>
+                  <span className="icon ion-md-pause"></span>
+                  </button> </td>
+
                 <td className="song-title">{song.title}</td>
                 <td className="song-duration">{song.duration}</td>
               </tr>
