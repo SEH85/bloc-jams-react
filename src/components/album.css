@@ -32,10 +32,6 @@ nav img {
 }
 
 #album-cover-art {
-  float: center;
-  margin-right: 2rem;
-  position: fixed;
-  left: 30px;
   width: 150px;
   height: 150px;
 }
