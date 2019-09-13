@@ -7,13 +7,13 @@ import React, { Component } from 'react';
                 <div className="player-bar-controls">
                     <section id="buttons">
                         <button id="previous" onClick={this.props.handlePrevClick}>
-                            <span className="player-icon ion-ios-skipbackward"></span>
+                            <span className="player-icon ion-ios-skip-backward"></span>
                         </button>
                         <button id="play-pause" onClick={this.props.handleSongClick}>
                             <span className={'play-icon ' + (this.props.isPlaying ? 'ion-ios-pause' : 'ion-ios-play')}></span>
                         </button>
                         <button id="next" onClick={this.props.handleNextClick}>
-                            <span className="player-icon ion-ios-skipforward"></span>
+                            <span className="player-icon ion-ios-skip-forward"></span>
                         </button>
                     </section>
                     <section id="time-control">
